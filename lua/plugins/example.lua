@@ -9,14 +9,20 @@ if true then return {} end
 -- * disable/enabled LazyVim plugins
 -- * override the configuration of LazyVim plugins
 return {
-  -- add gruvbox
-  { "ellisonleao/gruvbox.nvim" },
+  {
+    "AlexvZyl/nordic.nvim",
+    lazy = false,
+    priority = 1000,
+    config = function()
+      require("nordic").load()
+    end,
+  },
 
   -- Configure LazyVim to load gruvbox
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "gruvbox",
+      colorscheme = "nordic",
     },
   },
 
@@ -134,7 +140,11 @@ return {
         "typescript",
         "vim",
         "yaml",
+        "gdscript",
+        "godot_resource",
+        "gdshader",
       },
+      auto_install = true,
     },
   },
 

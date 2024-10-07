@@ -11,7 +11,6 @@ return {
         "lua",
         "markdown",
         "markdown_inline",
-        "python",
         "query",
         "regex",
         "tsx",
@@ -19,20 +18,11 @@ return {
         "vim",
         "yaml",
         "go",
+        "gdscript",
+        "godot_resource",
+        "gdshader",
       },
-    },
-  },
-  {
-    "sho-87/kanagawa-paper.nvim",
-    lazy = false,
-    priority = 1000,
-    opts = {},
-  },
-  -- Configure LazyVim to load gruvbox
-  {
-    "LazyVim/LazyVim",
-    opts = {
-      colorscheme = "kanagawa-paper",
+      auto_install = true,
     },
   },
 }
